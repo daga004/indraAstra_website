@@ -1,0 +1,17 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Public team photographs may be read for the public team page. Uploads and
+    // replacements are intentionally blocked in the browser and should be done via
+    // Firebase Console, CLI, or an authenticated admin workflow.
+    match /team/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Everything else remains private by default.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
