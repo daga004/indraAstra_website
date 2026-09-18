@@ -1,3 +1,6 @@
+import logoDark from '../assets/logo-dark.png';
+import logoMark from '../assets/logo-mark.png';
+
 interface BrandMarkProps {
   compact?: boolean;
   variant?: 'mark' | 'full';
@@ -8,7 +11,7 @@ export function BrandMark({ compact = false, variant = 'mark' }: BrandMarkProps)
     return (
       <div className="logo logo--full" aria-label="IndraAstra">
         <img
-          src="/logo-dark.png"
+          src={logoDark}
           alt="IndraAstra - Faster and Smarter"
           className="logo-full-img"
           width={185}
@@ -20,7 +23,7 @@ export function BrandMark({ compact = false, variant = 'mark' }: BrandMarkProps)
   return (
     <div className="logo" aria-label="IndraAstra">
       <img
-        src="/logo-mark.png"
+        src={logoMark}
         alt="IndraAstra"
         className="logo-symbol-img"
         width={40}
