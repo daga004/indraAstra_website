@@ -90,9 +90,8 @@ export const fallbackTeamMembers: TeamMember[] = [
   {
     id: 'dhiraj-daga',
     name: 'Dhiraj Daga',
-    role: 'Half Scientist - Half Engineer',
-    bio:
-      'AI Lead at Allen Digital (300K+ active users). Optimized Walmart defect detection (+8%). Solved document structure OCR for Project Anuvaad (Supreme Court of India). Created India’s largest Indic OCR validation dataset and parallel sentences.',
+    role: 'Chief Technical Officer',
+    photoUrl: '/team/dhiraj-daga.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/dddhiraj',
     displayOrder: 1,
     active: true,
