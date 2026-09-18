@@ -97,5 +97,32 @@ export const fallbackTeamMembers: TeamMember[] = [
     displayOrder: 1,
     active: true,
   },
+  {
+    id: 'sarthak-jain',
+    name: 'Sarthak Jain',
+    role: 'Founding AI Engineer',
+    photoUrl: '/team/sarthak-jain.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/sartj/',
+    displayOrder: 2,
+    active: true,
+  },
+  {
+    id: 'manik-sharma',
+    name: 'Manik Sharma',
+    role: 'Founding AI Engineer',
+    photoUrl: '/team/manik-sharma.jpg',
+    linkedinUrl: 'https://in.linkedin.com/in/manik-sharma-72495b24a',
+    displayOrder: 3,
+    active: true,
+  },
+  {
+    id: 'yash-sahay',
+    name: 'Yash Sahay',
+    role: 'Intern',
+    photoUrl: '/team/yash-sahay.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/yash-sahay-profile/',
+    displayOrder: 4,
+    active: true,
+  },
 ];
 
