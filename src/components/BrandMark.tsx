@@ -15,6 +15,8 @@ export function BrandMark({ compact = false, variant = 'mark' }: BrandMarkProps)
           alt="IndraAstra - Faster and Smarter"
           className="logo-full-img"
           width={185}
+          loading="eager"
+          decoding="sync"
         />
       </div>
     );
@@ -28,6 +30,8 @@ export function BrandMark({ compact = false, variant = 'mark' }: BrandMarkProps)
         className="logo-symbol-img"
         width={40}
         height={40}
+        loading="eager"
+        decoding="sync"
       />
       {!compact && <span className="logo-text">IndraAstra</span>}
     </div>
