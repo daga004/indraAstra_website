@@ -7,7 +7,7 @@ export function Footer() {
     <footer>
       <div className="footer-grid">
         <div className="footer-brand">
-          <BrandMark />
+          <BrandMark variant="full" />
           <p>
             AI research and innovation focused on efficient, reliable, and scalable intelligence.
           </p>
