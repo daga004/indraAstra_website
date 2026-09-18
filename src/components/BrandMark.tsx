@@ -11,7 +11,7 @@ export function BrandMark({ compact = false, variant = 'mark' }: BrandMarkProps)
           src="/logo-dark.png"
           alt="IndraAstra - Faster and Smarter"
           className="logo-full-img"
-          width={170}
+          width={185}
         />
       </div>
     );
