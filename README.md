@@ -122,9 +122,22 @@ The page reads only active documents and reorders them automatically.
 
 Storage browser writes are blocked by design. Use Firebase Console, CLI, or a future authenticated admin workflow for uploads.
 
-### Contact submissions
+### Contact submissions & automated email dispatch
 
-The Contact page validates fields before writing a document to `contactSubmissions`. It sends a Firebase server timestamp and a `new` status. The production rules permit creates only with the exact expected shape and do not allow public reads. Review messages in Firebase Console or in a private internal tool that uses the Admin SDK.
+The Contact page validates fields before writing a document to `contactSubmissions`. It records a Firebase server timestamp and a `new` status. In addition, an automated notification containing all inquiry details is dispatched immediately to:
+- `eswar@indraastra.in`
+- `dhiraj.daga@indraastra.in`
+
+Email forwarding supports:
+1. **Direct mail dispatch (default)**: Inquiries are automatically forwarded to `eswar@indraastra.in` (with `dhiraj.daga@indraastra.in` CC'd) with direct reply-to set to the inquirer.
+2. **Internal Google Workspace webhook**: Deploy the provided `scripts/google-apps-script-mailer.js` under `common@indraastra.in` in Google Apps Script and configure `VITE_CONTACT_WEBHOOK_URL` in `.env.local`.
+3. **Firebase Extension**: Writes to `mail` collection are permitted by [firestore.rules](firestore.rules) for use with Firebase's official `Trigger Email` extension.
+
+## Backend ownership & Firebase account
+
+To connect the backend to `common@indraastra.in`:
+- **Option A (Grant Ownership)**: In Firebase Console under Project Settings > Users and Permissions, add `common@indraastra.in` as **Owner**.
+- **Option B (New Project under common@indraastra.in)**: Create a project under `common@indraastra.in`, update `.firebaserc` and `.env.local` with the new project settings, authenticate using `firebase login:add`, and deploy rules and hosting.
 
 ## Security notes
 
@@ -134,10 +147,10 @@ The rules do not include an in-browser admin editor. That keeps the public attac
 
 ## Deployment checklist
 
-- Replace `.firebaserc` placeholder project ID.
+- Replace `.firebaserc` placeholder project ID (or verify existing).
 - Add `.env.local` locally or set matching `VITE_` environment values in the build environment. Never commit `.env.local`.
 - Publish approved `siteContent` and `teamMembers` records.
 - Upload approved, optimized team images under `team/`.
-- Deploy Firestore and Storage rules.
+- Deploy Firestore and Storage rules (`firebase deploy --only firestore:rules,storage`).
 - Run `npm run typecheck` and `npm run build`.
-- Deploy Firebase Hosting.
+- Deploy Firebase Hosting (`firebase deploy --only hosting`).

@@ -21,6 +21,14 @@ service cloud.firestore {
       allow get, list, update, delete: if false;
     }
 
+    // Firebase Trigger Email extension queue
+    match /mail/{mailId} {
+      allow create: if request.resource.data.keys().hasOnly(['to', 'message', 'createdAt'])
+        && request.resource.data.to is list
+        && request.resource.data.createdAt == request.time;
+      allow get, list, update, delete: if false;
+    }
+
     function isValidContactSubmission() {
       return request.resource.data.keys().hasOnly([
         'name', 'email', 'organization', 'subject', 'message', 'createdAt', 'status'
