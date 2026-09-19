@@ -803,12 +803,12 @@ footer {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
   margin-top: 40px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -894,6 +894,10 @@ footer {
   line-height: 1.7;
   flex: 1;
   margin-bottom: 24px;
+}
+
+.team-card-content p:last-child {
+  margin-bottom: 0;
 }
 
 .linkedin-button {

@@ -117,13 +117,32 @@ export const fallbackTeamMembers: TeamMember[] = [
     active: true,
   },
   {
+    id: 'sunil-khana',
+    name: 'Sunil Khana',
+    role: 'Mentor',
+    bio: 'Director - SAI Agroforestry, Co-Founder & Director - GreenBloom Energy',
+    photoUrl: '/team/sunil-khana.jpg',
+    displayOrder: 4,
+    active: true,
+  },
+  {
     id: 'yash-sahay',
     name: 'Yash Sahay',
     role: 'Intern',
     bio: 'Data Science student at IIT Madras and passionate on strengthening fundamentals and exploring deeper AI concepts.',
     photoUrl: '/team/yash-sahay.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/yash-sahay-profile/',
-    displayOrder: 4,
+    displayOrder: 5,
+    active: true,
+  },
+  {
+    id: 'eswar-kompalli',
+    name: 'Eswar Kompalli',
+    role: 'Intern',
+    bio: 'Data-driven business analytics student building hands-on experience.',
+    photoUrl: '/team/eswar-kompalli.jpg',
+    displayOrder: 6,
     active: true,
   },
 ];
+
