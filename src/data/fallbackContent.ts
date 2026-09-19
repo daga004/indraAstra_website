@@ -5,7 +5,7 @@ import type { ContactPageContent, HomeContent, SiteSettings, TeamMember } from '
 export const fallbackHomeContent: HomeContent = {
   eyebrow: 'AI Research · Bengaluru, India',
   heroTitle: 'Get the most of your AI journey',
-  heroLead: '',
+  heroLead: 'Custom optimization for businesses already using AI, aligned to three critical performance levers.',
   aboutTitle: 'Rethinking how intelligence is built.',
   aboutBody:
     'IndraAstra is a research-driven AI company based in Bengaluru, India. We work at the intersection of artificial intelligence, computational neuroscience, and advanced machine learning to develop AI systems that are more efficient, reliable, and scalable.',
@@ -100,7 +100,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     id: 'sarthak-jain',
     name: 'Sarthak Jain',
     role: 'Founding AI Engineer',
-    bio: 'Worked in multiple ML startups and graduated from IIT(BHU) in 2025.',
+    bio: 'Machine learning enthusiast who transforms pixels and words into data-driven insights, with a strong focus on deepening his understanding of deep learning. He has contributed to multiple ML startups and graduated from IIT (BHU) in 2025.',
     photoUrl: '/team/sarthak-jain.jpg?v=3',
     linkedinUrl: 'https://www.linkedin.com/in/sartj/',
     displayOrder: 2,
@@ -110,7 +110,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     id: 'manik-sharma',
     name: 'Manik Sharma',
     role: 'Founding AI Engineer',
-    bio: 'Graduated from IIT (BHU) in 2026 with an Integrated Dual Degree in Engineering Physics.',
+    bio: 'IIT (BHU) graduate with an Integrated Dual Degree in Engineering Physics, specializing in deep learning, neural network architectures, and optimization. Master’s research focused on spatio-temporal forecasting of solar magnetic winding flux maps using Convolutional LSTMs, alongside developing a novel brain-inspired neural network architecture and applying genetic algorithms for hyperparameter optimization.',
     photoUrl: '/team/manik-sharma.jpg?v=3',
     linkedinUrl: 'https://in.linkedin.com/in/manik-sharma-72495b24a',
     displayOrder: 3,

@@ -67,6 +67,10 @@ export function HomePage() {
             <span className="gradient-text">AI journey</span>
           </h1>
 
+          <p className="hero-lead">
+            {content.heroLead || 'Custom optimization for businesses already using AI, aligned to three critical performance levers.'}
+          </p>
+
           <div className="hero-buttons">
             <ButtonLink to="/#vision">Explore our research</ButtonLink>
             <ButtonLink to="/team" variant="secondary">
