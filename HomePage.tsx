@@ -89,7 +89,7 @@ export function HomePage() {
           <div className="about-card">
             <h3>Intelligence, engineered differently.</h3>
             <p>
-              Today's AI systems require massive compute infrastructure. IndraAstra explores alternative
+              Today's AI systems require massive compute infrastructure. IndraAstra builds alternative
               computational paradigms to deliver dramatic efficiency gains and database-like scaling economics
               without sacrificing capability.
             </p>
@@ -138,11 +138,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Long-Term Vision - Next-Gen LLM Architecture */}
+      {/* What We Are Building - Next-Gen LLM Architecture */}
       <section className="section vision-section" id="vision" aria-labelledby="vision-title">
         <div className="container">
           <SectionHeader
-            eyebrow={content.visionEyebrow}
+            eyebrow={content.visionEyebrow || 'What we are building'}
             title={content.visionTitle}
             lead={content.visionLead}
           />

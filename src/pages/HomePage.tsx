@@ -31,6 +31,15 @@ export function HomePage() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  useEffect(() => {
+    if (!loading && window.location.hash) {
+      const el = document.querySelector(window.location.hash);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    }
+  }, [loading]);
+
   if (loading || !result) {
     return (
       <div className="page-loading container">
@@ -89,7 +98,7 @@ export function HomePage() {
           <div className="about-card">
             <h3>Intelligence, engineered differently.</h3>
             <p>
-              Today's AI systems require massive compute infrastructure. IndraAstra explores alternative
+              Today's AI systems require massive compute infrastructure. IndraAstra builds alternative
               computational paradigms to deliver dramatic efficiency gains and database-like scaling economics
               without sacrificing capability.
             </p>
@@ -133,10 +142,10 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Long-Term Vision - Next-Gen LLM Architecture */}
+      {/* What We Are Building - Next-Gen LLM Architecture */}
       <section id="vision" aria-labelledby="vision-title">
         <div className="section-header">
-          <div className="section-label">{content.visionEyebrow || '04 / Long-Term Vision'}</div>
+          <div className="section-label">{content.visionEyebrow || 'What we are building'}</div>
           <h2 id="vision-title">{content.visionTitle}</h2>
           <p>{content.visionLead}</p>
         </div>

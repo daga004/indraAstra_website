@@ -45,7 +45,7 @@ export const fallbackHomeContent: HomeContent = {
       description: 'From rigorous business analysis to complete production deployment.',
     },
   ],
-  visionEyebrow: 'Long-term research direction',
+  visionEyebrow: 'What we are building',
   visionTitle: 'Next-generation LLM architecture',
   visionLead:
     'Novel algorithm under development with a fundamentally different information processing paradigm.',
