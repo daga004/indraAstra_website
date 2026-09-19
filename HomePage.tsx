@@ -53,18 +53,46 @@ export function HomePage() {
           </div>
 
           <h1 id="home-title">
-            Enterprise-grade AI at the
+            Get the most of your
             <br />
-            <span className="gradient-text">cost of a database.</span>
+            <span className="gradient-text">AI journey</span>
           </h1>
 
-          <p className="hero-lead">{content.heroLead}</p>
-
           <div className="hero-buttons">
-            <ButtonLink to="/#delivery">Explore our research</ButtonLink>
+            <ButtonLink to="/#vision">Explore our research</ButtonLink>
             <ButtonLink to="/team" variant="secondary">
               Meet our team
             </ButtonLink>
+          </div>
+
+          <div className="research-grid hero-cards" id="research">
+            {content.performanceLevers.map((lever, index) => (
+              <article className="research-card" key={lever.title}>
+                <div className="research-number">0{index + 1} / {lever.title.toUpperCase()}</div>
+                <h3>{lever.title}</h3>
+                <p>{lever.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Approach / Engagement Model */}
+      <section className="approach section" id="approach">
+        <div className="container">
+          <SectionHeader
+            eyebrow="01 / How we engage"
+            title={content.engagementTitle}
+            lead="A disciplined methodology for evaluating and deploying high-performance AI optimizations."
+          />
+          <div className="approach-grid">
+            {content.engagementSteps.map((step, index) => (
+              <div className="approach-item" key={step.title}>
+                <span>0{index + 1}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -74,7 +102,7 @@ export function HomePage() {
         <div className="container about-grid">
           <div>
             <div className="section-header">
-              <div className="section-label">01 / Who we are</div>
+              <div className="section-label">02 / Who we are</div>
               <h2>{content.aboutTitle}</h2>
             </div>
             <div className="about-text">
@@ -93,47 +121,6 @@ export function HomePage() {
               computational paradigms to deliver dramatic efficiency gains and database-like scaling economics
               without sacrificing capability.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Deliver - AI Performance Engineering */}
-      <section className="section" id="delivery" aria-labelledby="delivery-title">
-        <div className="container">
-          <SectionHeader
-            eyebrow="02 / What we deliver"
-            title={content.deliveryTitle}
-            lead={content.deliveryLead}
-          />
-          <div className="lever-grid">
-            {content.performanceLevers.map((lever, index) => (
-              <article className="lever-card" key={lever.title}>
-                <div className="research-number">0{index + 1} / {lever.title.toUpperCase()}</div>
-                <h3>{lever.title}</h3>
-                <p>{lever.description}</p>
-                <span className="lever-card__line" aria-hidden="true" />
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approach / Engagement Model */}
-      <section className="approach section" id="approach">
-        <div className="container">
-          <SectionHeader
-            eyebrow="03 / How we engage"
-            title={content.engagementTitle}
-            lead="A disciplined methodology for evaluating and deploying high-performance AI optimizations."
-          />
-          <div className="approach-grid">
-            {content.engagementSteps.map((step, index) => (
-              <div className="approach-item" key={step.title}>
-                <span>0{index + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -4,9 +4,8 @@ import type { ContactPageContent, HomeContent, SiteSettings, TeamMember } from '
 // components and mirrors the Firestore documents described in docs/CONTENT_AND_DATA_MODEL.md.
 export const fallbackHomeContent: HomeContent = {
   eyebrow: 'AI Research · Bengaluru, India',
-  heroTitle: 'Enterprise-grade AI at the cost of a database.',
-  heroLead:
-    'IndraAstra helps organizations already using AI improve the economics, speed, and reliability of their systems through AI performance engineering and novel architecture.',
+  heroTitle: 'Get the most of your AI journey',
+  heroLead: '',
   aboutTitle: 'Rethinking how intelligence is built.',
   aboutBody:
     'IndraAstra is a research-driven AI company based in Bengaluru, India. We work at the intersection of artificial intelligence, computational neuroscience, and advanced machine learning to develop AI systems that are more efficient, reliable, and scalable.',

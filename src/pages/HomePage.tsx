@@ -35,7 +35,7 @@ export function HomePage() {
     if (!loading && window.location.hash) {
       const el = document.querySelector(window.location.hash);
       if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+        setTimeout(() => el.scrollIntoView({ behavior: 'auto' }), 100);
       }
     }
   }, [loading]);
@@ -62,19 +62,45 @@ export function HomePage() {
           </div>
 
           <h1 id="home-title">
-            Enterprise-grade AI at the
+            Get the most of your
             <br />
-            <span className="gradient-text">cost of a database.</span>
+            <span className="gradient-text">AI journey</span>
           </h1>
 
-          <p>{content.heroLead}</p>
-
           <div className="hero-buttons">
-            <ButtonLink to="/#research">Explore our research</ButtonLink>
+            <ButtonLink to="/#vision">Explore our research</ButtonLink>
             <ButtonLink to="/team" variant="secondary">
               Meet our team
             </ButtonLink>
           </div>
+
+          <div className="research-grid hero-cards" id="research">
+            {content.performanceLevers.map((lever, index) => (
+              <article className="research-card" key={lever.title}>
+                <div className="research-number">0{index + 1} / {lever.title.toUpperCase()}</div>
+                <h3>{lever.title}</h3>
+                <p>{lever.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Approach / Engagement Model */}
+      <section className="approach" id="approach">
+        <div className="section-header">
+          <div className="section-label">01 / Approach</div>
+          <h2>{content.engagementTitle}</h2>
+          <p>A disciplined methodology for evaluating and deploying high-performance AI optimizations.</p>
+        </div>
+        <div className="approach-grid">
+          {content.engagementSteps.map((step, index) => (
+            <div className="approach-item" key={step.title}>
+              <span>0{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -83,7 +109,7 @@ export function HomePage() {
         <div className="about-grid">
           <div>
             <div className="section-header">
-              <div className="section-label">01 / Who we are</div>
+              <div className="section-label">02 / Who we are</div>
               <h2>{content.aboutTitle}</h2>
             </div>
             <div className="about-text">
@@ -103,42 +129,6 @@ export function HomePage() {
               without sacrificing capability.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* What We Deliver - AI Performance Engineering */}
-      <section id="research" aria-labelledby="delivery-title">
-        <div className="section-header">
-          <div className="section-label">02 / What we deliver</div>
-          <h2 id="delivery-title">{content.deliveryTitle}</h2>
-          {content.deliveryLead && <p>{content.deliveryLead}</p>}
-        </div>
-        <div className="research-grid">
-          {content.performanceLevers.map((lever, index) => (
-            <article className="research-card" key={lever.title}>
-              <div className="research-number">0{index + 1} / {lever.title.toUpperCase()}</div>
-              <h3>{lever.title}</h3>
-              <p>{lever.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* Approach / Engagement Model */}
-      <section className="approach" id="approach">
-        <div className="section-header">
-          <div className="section-label">03 / Approach</div>
-          <h2>{content.engagementTitle}</h2>
-          <p>A disciplined methodology for evaluating and deploying high-performance AI optimizations.</p>
-        </div>
-        <div className="approach-grid">
-          {content.engagementSteps.map((step, index) => (
-            <div className="approach-item" key={step.title}>
-              <span>0{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-          ))}
         </div>
       </section>
 
